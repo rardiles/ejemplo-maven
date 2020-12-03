@@ -27,8 +27,10 @@ pipeline {
                 }
                 stage('SonarQube analysis') {
                     steps {
-                        withSonarQubeEnv('sonar') {
-                            sh './mvnw org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+                        dir('/Users/ricardoardiles/Desktop/Personal/Diplomado/taller4/ejemplo-maven'){
+                            withSonarQubeEnv('sonar') {
+                                sh './mvnw org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+                            }
                         }
                     }
                 }
