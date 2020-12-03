@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options {
-      timeout(time: 120, unit: 'SECONDS') 
+      timeout(time: 180, unit: 'SECONDS') 
     }
     stages {
                 stage('Compile') {
@@ -34,6 +34,7 @@ pipeline {
                 }
                 stage('Test') {
                     steps {
+                        sleep(time: 10, unit: "SECONDS")
                         dir('/Users/ricardoardiles/Documents/Diplomado/modulo3git/ejemplo-maven'){
                             sh 'curl -X GET "http://localhost:8081/rest/mscovid/test?msg=testing"'
                         }
