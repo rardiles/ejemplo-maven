@@ -25,6 +25,10 @@ pipeline {
                         }
                     }
                 }
+                stage('SonarQube analysis') {
+                    withSonarQubeEnv('sonar') {
+                    sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+                }
                 stage('Run') {
                     steps {
                         dir('/Users/ricardoardiles/Desktop/Personal/Diplomado/taller4/ejemplo-maven'){
