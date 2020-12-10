@@ -50,8 +50,8 @@ pipeline {
                                 type('jar')
                                 classifier('')
                                 file('/Users/ricardoardiles/Documents/Diplomado/modulo3git/ejemplo-maven/build/DevOpsUsach2020-0.0.1.jar')
+                                }
                             }
-                        }
                         }
                 }
                 stage('Run') {
