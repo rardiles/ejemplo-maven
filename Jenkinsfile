@@ -44,7 +44,7 @@ pipeline {
                             groupId('com.devopsusach2020')
                             version('1.0.1')
                             repository('test-nexus')
-                            credentialsId('44620c50-1589-4617-a677-7563985e46e1')
+                            credentialsId('nexus-local')
                             artifact {
                                 artifactId('DevOpsUsach2020')
                                 type('jar')
