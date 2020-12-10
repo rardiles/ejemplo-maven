@@ -45,7 +45,7 @@ pipeline {
                         ], 
                         credentialsId: 'nexus-local', 
                         groupId: 'com.devopsusach2020', 
-                        nexusUrl: 'https://9adb6e4f277c.ngrok.io', 
+                        nexusUrl: 'http://localhost:8081/repository/test-nexus/', 
                         nexusVersion: 'nexus3', 
                         protocol: 'https', 
                         repository: 'test-nexus', 
