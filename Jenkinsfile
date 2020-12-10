@@ -40,7 +40,7 @@ pipeline {
                         nexusArtifactUploader artifacts: 
                         [
                             [
-                                artifactId: 'devopsusach2020', classifier: '', file: '/Users/ricardoardiles/Documents/Diplomado/modulo3git/ejemplo-maven/build/DevOpsUsach2020-0.0.1.jar', type: 'jar'
+                                artifactId: 'DevOpsUsach2020', classifier: '', file: 'build/DevOpsUsach2020-1.0.1.jar', type: 'jar'
                             ]
                         ], 
                         credentialsId: 'nexus-local', 
@@ -49,7 +49,7 @@ pipeline {
                         nexusVersion: 'nexus3', 
                         protocol: 'https', 
                         repository: 'test-nexus', 
-                        version: '0.0.1'
+                        version: '1.0.1'
                     }
                 }
                 stage('Run') {
