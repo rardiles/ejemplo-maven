@@ -36,7 +36,7 @@ pipeline {
                     }
                 }
                 stage('Nexus Upload'){
-                    steps{
+
                         nexusArtifactUploader artifacts: 
                         [
                             [
@@ -50,7 +50,7 @@ pipeline {
                         protocol: 'https', 
                         repository: 'test-nexus', 
                         version: '1.0.1'
-                    }
+ 
                 }
                 stage('Run') {
                     steps {
