@@ -36,6 +36,7 @@ pipeline {
                 }
                 stage('Nexus Upload'){
                     steps{
+                        sh 'ls -la'
                         nexusArtifactUploader artifacts: 
                         [
                             [
