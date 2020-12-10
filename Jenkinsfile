@@ -40,7 +40,7 @@ pipeline {
                         nexusArtifactUploader artifacts: 
                         [
                             [
-                                artifactId: 'DevOpsUsach2020', classifier: '', file: 'DevOpsUsach2020-1.0.1.jar', type: 'jar'
+                                artifactId: 'DevOpsUsach2020', classifier: '', file: 'build/DevOpsUsach2020-1.0.1.jar', type: 'jar'
                             ]
                         ], 
                         credentialsId: 'nexus-local', 
