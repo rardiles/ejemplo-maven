@@ -13,13 +13,7 @@
 	<version>1.0.1</version>
 	<name>DevOpsUsach2020</name>
 	<description>Proyecto de ejemplo para el desarrollo del diplomado DevOps Universidad de Santiago de Chile 2020</description>
-	<servers>
-          <server>
-          <id>nexus-local</id>
-          <username>admin</username>
-          <password>Nexus123..</password>
-          </server>
-    </servers>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
