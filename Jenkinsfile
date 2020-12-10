@@ -22,6 +22,7 @@ pipeline {
                     steps {
 
                             sh './mvnw clean package -e'
+                            sh 'pwd'
 
                     }
                 }
