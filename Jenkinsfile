@@ -48,10 +48,10 @@ pipeline {
                         artifacts: [
                             [artifactId: 'DevOpsUsach2020',
                             classifier: '',
-                            file: '/Users/ricardoardiles/Documents/Diplomado/modulo3git/ejemplo-maven/build/DevOpsUsach2020-0.0.1.jar',
+                            file: 'build/DevOpsUsach2020-0.0.1.jar',
                             type: 'jar']
                         ]
-                    )
+                        )
                         }
                 }
                 stage('Run') {
