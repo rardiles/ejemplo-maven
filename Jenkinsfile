@@ -40,7 +40,7 @@ pipeline {
                         nexusArtifactUploader(
                         nexusVersion: 'nexus3',
                         protocol: 'http',
-                        nexusUrl: 'http://localhost:8081',
+                        nexusUrl: 'localhost:8081',
                         groupId: 'com.devopsusach2020',
                         version: '1.0.0',
                         repository: 'test-nexus',
