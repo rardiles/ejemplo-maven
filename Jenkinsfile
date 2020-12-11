@@ -37,8 +37,21 @@ pipeline {
                 }
                 stage('Nexus Upload'){
                     steps {
-                                        nexusPublisher nexusInstanceId: 'nexus-local', nexusRepositoryId: 'test-nexus', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: 'build/DevOpsUsach2020-1.0.2.jar', extension: 'jar', filePath: '']], mavenCoordinate: [artifactId: 'DevOpsUsach2020', groupId: 'com.devopsusach2020', packaging: 'jar', version: '1.0.0']]]
-
+                        nexusArtifactUploader(
+                        nexusVersion: 'nexus3',
+                        protocol: 'http',
+                        nexusUrl: 'localhost:8081',
+                        groupId: 'com.devopsusach2020',
+                        version: '1.0.2',
+                        repository: 'test-nexus',
+                        credentialsId: 'nexus-local',
+                        artifacts: [
+                            [artifactId: 'DevOpsUsach2020',
+                            classifier: '',
+                            file: 'build/DevOpsUsach2020-1.0.2.jar',
+                            type: 'jar']
+                        ]
+                        )
                         }
                 }
                 stage('Run') {
