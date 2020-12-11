@@ -44,42 +44,6 @@ pipeline {
                         )
                         }
                 }
-
-
-                stage('Unit') {
-                    steps {
-
-                            sh './mvnw clean test -e'
-
-                    }
-                }
-                stage('Jar') {
-                    steps {
-
-                            sh './mvnw clean package -e'
-                            sh 'pwd'
-
-                    }
-                }
                 
-                stage('Nexus Upload'){
-                    steps {
-                        nexusArtifactUploader(
-                        nexusVersion: 'nexus3',
-                        protocol: 'http',
-                        nexusUrl: 'localhost:8081',
-                        groupId: 'com.devopsusach2020',
-                        version: '1.0.2',
-                        repository: 'test-nexus',
-                        credentialsId: 'nexus-local',
-                        artifacts: [
-                            [artifactId: 'DevOpsUsach2020',
-                            classifier: '',
-                            file: 'build/DevOpsUsach2020-1.0.2.jar',
-                            type: 'jar']
-                        ]
-                        )
-                        }
-                }
         }
 }
