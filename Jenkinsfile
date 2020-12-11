@@ -15,7 +15,7 @@ pipeline {
                 stage('Run') {
                     steps {
 
-                            sh 'java -jar ${env.WORKSPACE}/DevOpsUsach2020-0.0.1.jar &'
+                            sh 'java -jar $WORKSPACE/DevOpsUsach2020-0.0.1.jar &'
 
                     }
                 }
