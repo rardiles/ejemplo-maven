@@ -3,6 +3,7 @@ pipeline {
     options {
       timeout(time: 60, unit: 'SECONDS') 
     }
+    
     stages {
                 stage('Download') {
                     steps {
@@ -14,7 +15,7 @@ pipeline {
                 stage('Run') {
                     steps {
 
-                            sh 'java -jar DevOpsUsach2020-0.0.1.jar &'
+                            sh 'java -jar ${env.WORKSPACE}/DevOpsUsach2020-0.0.1.jar &'
 
                     }
                 }
