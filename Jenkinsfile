@@ -39,12 +39,12 @@ pipeline {
                     steps {
                         nexusArtifactUploader(
                         nexusVersion: 'nexus3',
-                        protocol: 'https',
+                        protocol: 'http',
                         nexusUrl: '63c4604e892f.ngrok.io',
                         groupId: 'com.devopsusach2020',
                         version: '0.0.1',
                         repository: 'test-nexus',
-                        credentialsId: 'nexus',
+                        credentialsId: 'nexus-dianela',
                         artifacts: [
                             [artifactId: 'DevOpsUsach2020',
                             classifier: '',
