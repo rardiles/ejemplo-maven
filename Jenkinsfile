@@ -8,14 +8,14 @@ pipeline {
                 stage('Download') {
                     steps {
 
-                            sh 'curl -X GET -u admin:$admin_password http://localhost:8081/repository/test-nexus/com/devopsusach2020/DevOpsUsach2020/0.0.1/DevOpsUsach2020-0.0.1.jar -O'
+                            sh 'curl -X GET -u admin:$admin_password http://localhost:8081/repository/test-nexus/com/devopsusach2020/DevOpsUsach2020/0.0.1/DevOpsUsach2020-0.0.1.jar -O >'
                             sh 'pwd'
                     }
                 }
                 stage('Run') {
                     steps {
 
-                            sh 'java -jar $WORKSPACE/DevOpsUsach2020-0.0.1.jar &'
+                            sh 'nohup bash ./mvnw spring-boot:run &'
 
                     }
                 }
